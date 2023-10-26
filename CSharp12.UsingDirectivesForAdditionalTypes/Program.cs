@@ -1,7 +1,11 @@
-﻿using NullableGuid = System.Guid?;
+﻿using MyConsole;
+//using Console = System.Console;
+
+using NullableGuid = System.Guid?;
 using Ints = int[];
 using ComplexNumber = (decimal Real, decimal Imaginary);
 
+_ = DateTime.Parse("2023-01-01");
 
 
 NullableGuid guid = Guid.Empty;
@@ -18,5 +22,13 @@ var complexNumber = new ComplexNumber
     Imaginary = 2.0m
 };
 
-Console.WriteLine(
+System.Console.WriteLine(
     $"{complexNumber.Real} + {complexNumber.Imaginary}i");
+
+namespace MyConsole
+{
+    class Console {
+        public static void Hug() { }
+        public static void ThereThere() { }
+    }
+}
