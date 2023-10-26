@@ -1,39 +1,14 @@
-﻿
-using System.Runtime.CompilerServices;
-
-Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Ultimate multiply!");
 Console.WriteLine("-------------");
-Console.WriteLine();
+Console.WriteLine("by Semyon Weibull");
 
-Console.WriteLine(Utils.MyRandomMethod(2, 3));
+Console.WriteLine(Ultimate.Multiply(6, 9));
 
-
-
-public static class Utils
+public static class Ultimate
 {
-    public static string MyRandomMethod(int a, int b)
+    public static string Multiply(int a, int b)
     {
         return $"{a} + {b} = {a + b}";
     }
 }
 
-
-namespace System.Runtime.CompilerServices
-{
-    [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
-    sealed class InterceptsLocationAttribute(string filePath, int line, int column) : Attribute
-    {
-    }
-}
-
-namespace Interception
-{
-    public static class Interceptor
-    {
-        [InterceptsLocation("C:\\_-_GITHUB_-_\\DotNet8-Swetugg-Gothenburg-2023\\CSharp12.Interceptors\\Program.cs", 8, 25)]
-        public static string InterceptedMyRandomMethod(int a, int b)
-        {
-            return "INTERCEPTED!";
-        }
-    }
-}

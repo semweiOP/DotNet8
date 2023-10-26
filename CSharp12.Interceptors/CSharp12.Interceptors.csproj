@@ -9,7 +9,7 @@
 		<InvariantGlobalization>true</InvariantGlobalization>
 		<LangVersion>preview</LangVersion>
 		<Features>InterceptorsPreview</Features>
-		<InterceptorsPreviewNamespaces>Interception</InterceptorsPreviewNamespaces>
+		<InterceptorsPreviewNamespaces>Caveman</InterceptorsPreviewNamespaces>
 	</PropertyGroup>
 
 </Project>
