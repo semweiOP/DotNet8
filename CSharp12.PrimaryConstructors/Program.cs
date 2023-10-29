@@ -1,5 +1,6 @@
 ﻿Console.WriteLine("Placeholder");
 
+public record StudentRecord(string name, string firstName, byte age);
 
 
 public class Student(string name, string firstName, byte age)
