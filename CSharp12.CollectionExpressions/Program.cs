@@ -24,15 +24,14 @@ Span<char> chars = ['a', 'b', 'c', 'd', 'e'];
 char[] chars2 = [ 'a', 'b', 'c', 'd', 'e' ];
 char[] chars3 = { 'a', 'b', 'c', 'd', 'e' };
 
-//CharBuffer buffer = ['H', 'e', 'l', 'l', 'o'];
+//LineBuffer line = ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!'];
 
 
-
-public class CharBuffer : IEnumerable<char>
+public class LineBuffer : IEnumerable<char>
 {
     private readonly char[] _buffer = new char[80];
 
-    public CharBuffer(ReadOnlySpan<char> buffer)
+    public LineBuffer(ReadOnlySpan<char> buffer)
     {
         int number = (_buffer.Length < buffer.Length) ? _buffer.Length : buffer.Length;
         for (int i = 0; i < number; i++)
@@ -43,10 +42,13 @@ public class CharBuffer : IEnumerable<char>
 
     public IEnumerator<char> GetEnumerator() => _buffer.AsEnumerable<char>().GetEnumerator();
     IEnumerator IEnumerable.GetEnumerator() => _buffer.GetEnumerator();
+
+    // etc
 }
 
-[CollectionBuilder(typeof(CharBuffer), "Create")]
-internal static class CharBufferBuilder
+
+[CollectionBuilder(typeof(LineBufferBuilder), "Create")]
+internal static class LineBufferBuilder
 {
-    internal static CharBuffer Create(ReadOnlySpan<char> values) => new CharBuffer(values);
+    internal static LineBuffer Create(ReadOnlySpan<char> values) => new LineBuffer(values);
 }
