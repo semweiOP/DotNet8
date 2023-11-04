@@ -1,8 +1,8 @@
 using FluentAssertions;
 
-namespace DotNet8.TimeAbstraction.Tests;
+namespace DotNet8.TimeAbstraction.QuickAndDirtyTests;
 
-public class DITests
+public class QuickAndDirtyTests
 {
 
 
