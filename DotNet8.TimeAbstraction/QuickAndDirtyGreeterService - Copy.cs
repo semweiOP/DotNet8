@@ -2,7 +2,7 @@
 
 public class QuickAndDirtyGreeterService()
 {
-    DateTime now = DateTime.UtcNow;
+    DateTime now = DateTime.Now;
 
     public QuickAndDirtyGreeterService(DateTime referenceNow) : this()
     {
@@ -16,6 +16,6 @@ public class QuickAndDirtyGreeterService()
             >= 5 and < 12 => "God morgon!",
             >= 12 and < 18 => "God eftermiddag!",
             _ => "God kväll!"
-        } + $" Klockan är {TimeOnly.FromDateTime(now).ToLongTimeString()}";
+        } + $" Klockan är {now.ToLongTimeString()}";
     }
 }

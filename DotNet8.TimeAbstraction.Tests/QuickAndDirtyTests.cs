@@ -1,26 +1,19 @@
 using FluentAssertions;
-using NSubstitute;
-using System;
 
-namespace DotNet8.TimeAbstraction.DITests;
+namespace DotNet8.TimeAbstraction.QuickAndDirtyTests;
 
-public class DITests
+public class QuickAndDirtyTests
 {
-    private readonly ITimeProvider _timeProvider = Substitute.For<ITimeProvider>();
-    private readonly DIGreeterService _greeter;
 
-    public DITests() {
-        _greeter = new DIGreeterService(_timeProvider);
-    }
 
     [Fact]
     public void TestGodEftermiddag()
     {
         // Arrange
-        _timeProvider.GetLocalNow().Returns(new DateTimeOffset(2023, 11, 11, 12, 50, 0,TimeSpan.Zero));
+        var greeter = new QuickAndDirtyGreeterService(new DateTime(2023, 11, 11, 12, 50, 0));
 
         // Act
-        var message = _greeter.Greet();
+        var message = greeter.Greet();
 
         // Assert
         message.Should().Contain("eftermiddag");
@@ -31,10 +24,10 @@ public class DITests
     public void TestGodMorgon()
     {
         // Arrange
-        _timeProvider.GetLocalNow().Returns(new DateTimeOffset(2023, 11, 11, 9, 50, 0, TimeSpan.Zero));
+        var greeter = new QuickAndDirtyGreeterService(new DateTime(2023, 11, 11, 9, 50, 0));
 
         // Act
-        var message = _greeter.Greet();
+        var message = greeter.Greet();
 
         // Assert
         message.Should().Contain("morgon");

@@ -16,7 +16,7 @@ internal class Worker(IServiceProvider services) : IHostedService, IHostedLifecy
     private void DoWork(object? state)
     {
         Console.WriteLine(
-            services.GetService<QuickAndDirtyGreeterService>()!.Greet()
+            services.GetService<DIGreeterService>()!.Greet()
         );
     }
 

@@ -7,7 +7,7 @@
             >= 5 and < 12 => "God morgon!",
             >= 12 and < 18 => "God eftermiddag!",
             _ => "God kväll!"
-        } + $" Klockan är {timeProvider.GetLocalNow().ToString("hh:mm:ss")}.";
+        } + $" Klockan är {timeProvider.GetLocalNow().ToString("HH:mm:ss")}.";
     }
 }
 
