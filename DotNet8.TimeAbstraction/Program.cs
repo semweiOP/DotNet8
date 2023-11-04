@@ -1,24 +1,14 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
+HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
+
+builder.Services.AddTransient<ITimeProvider, MyTimeProvider>();
+builder.Services.AddTransient<DIGreeterService>();
+builder.Services.AddTransient<QuickAndDirtyGreeterService>();
+builder.Services.AddHostedService<Worker>();
 
 
-Console.WriteLine("Hello, World!");
-var timeProvider = new MockedTimeProvider();
+using IHost host = builder.Build();
 
-
-Console.WriteLine(TimeProvider.System.GetUtcNow());
-Console.WriteLine(TimeProvider.System.GetLocalNow());
-
-
-await Task.Delay(TimeSpan.FromMinutes(1), timeProvider);
-
-Console.WriteLine("WAITED !!!");
-
-
-
-public class MockedTimeProvider : TimeProvider
-{
-    public override ITimer CreateTimer(TimerCallback callback, object? state, TimeSpan dueTime, TimeSpan period)
-    {
-        return base.CreateTimer(callback, state, TimeSpan.Zero, period);
-    }
-}
+await host.RunAsync();
