@@ -36,6 +36,6 @@ public class MyService
 
     public string GetCurrentUtc()
     {
-        return $"{_timeProvider.GetUtcNow()}";
+        return $"{_timeProvider.GetUtcNow():MM\\/dd\\/yyyy HH:mm:ss zzz}";
     }
 }

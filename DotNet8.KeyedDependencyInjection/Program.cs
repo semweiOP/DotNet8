@@ -25,7 +25,7 @@ public class FakeTimeProvider : TimeProvider
 {
     public override DateTimeOffset GetUtcNow()
     {
-        return new DateTimeOffset(2000, 1, 1, 13, 37, 0, TimeSpan.Zero);
+        return new DateTimeOffset(2000, 1, 1, 12, 37, 0, TimeSpan.Zero);
     }
 }
 

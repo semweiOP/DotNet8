@@ -22,7 +22,7 @@ var person1 = JsonSerializer.Deserialize<Person>(json);
 //catch (Exception ex)
 //{
 //    Console.WriteLine(ex.Message);
-}
+//}
 
 
 //// {"name":"John","first_name":"Doe"}
