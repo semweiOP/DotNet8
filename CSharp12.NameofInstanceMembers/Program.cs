@@ -3,6 +3,7 @@
 
 Console.WriteLine("Hello, World!");
 
+NameOf.NameOfExamples();
 
 internal class NameOf
 {

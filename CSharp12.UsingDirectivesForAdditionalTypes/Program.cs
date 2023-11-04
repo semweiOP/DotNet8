@@ -25,6 +25,8 @@ var complexNumber = new ComplexNumber
 System.Console.WriteLine(
     $"{complexNumber.Real} + {complexNumber.Imaginary}i");
 
+
+
 namespace MyConsole
 {
     class Console {
