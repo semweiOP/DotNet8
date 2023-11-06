@@ -11,7 +11,12 @@ var json = """
     """;
 
 var person1 = JsonSerializer.Deserialize<Person>(json);
+Console.WriteLine(person1);
 
+var serialized0 = JsonSerializer.Serialize(person1);
+Console.WriteLine(serialized0);
+
+////1.
 //try
 //{
 //    var person2 = JsonSerializer.Deserialize<Person>(json, new JsonSerializerOptions
@@ -25,6 +30,7 @@ var person1 = JsonSerializer.Deserialize<Person>(json);
 //}
 
 
+////2.
 //// {"name":"John","first_name":"Doe"}
 //var serialized1 = JsonSerializer.Serialize(person1, new JsonSerializerOptions
 //{
@@ -34,6 +40,7 @@ var person1 = JsonSerializer.Deserialize<Person>(json);
 //Console.WriteLine(serialized1);
 
 
+////.3
 //// {"NAME":"John","FIRST-NAME":"Doe"}
 //var serialized2 = JsonSerializer.Serialize(person1, new JsonSerializerOptions
 //{
@@ -43,15 +50,16 @@ var person1 = JsonSerializer.Deserialize<Person>(json);
 //Console.WriteLine(serialized2);
 
 
-////Changing some metadata properties
+////.4
+//Changing some metadata properties
 //var serialized3 = JsonSerializer.Serialize(person1, new JsonSerializerOptions
 //{
 //    TypeInfoResolver = MyContext.Default
-//        .WithAddedModifier(static typeInfo =>
-//        {
-//            foreach (JsonPropertyInfo prop in typeInfo.Properties)
-//                prop.Name = prop.Name.ToUpperInvariant();
-//        })
+//        //.WithAddedModifier(static typeInfo =>
+//        //{
+//        //    foreach (JsonPropertyInfo prop in typeInfo.Properties)
+//        //        prop.Name = prop.Name.ToUpperInvariant();
+//        //})
 //});
 
 
@@ -61,22 +69,8 @@ var person1 = JsonSerializer.Deserialize<Person>(json);
 record Person(string Name, string FirstName) ;
 
 
-//record Person(string Name, string FirstName) : IDerived;
-
-////Interface hierarchies
-//internal interface IDerived: IBase
-//{
-//    string Name { get; }
-//}
-
-//internal interface IBase
-//{
-//   string FirstName { get; }
-//}
-
-
-
-////Source generator
+////.4
+//Source generator
 //[JsonSerializable(typeof(Person))]
 //partial class MyContext : JsonSerializerContext
 //{ }

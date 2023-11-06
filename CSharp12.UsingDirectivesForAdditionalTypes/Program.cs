@@ -4,12 +4,15 @@
 using NullableGuid = System.Guid?;
 using Ints = int[];
 using ComplexNumber = (decimal Real, decimal Imaginary);
+using DbInt = int;
 
 _ = DateTime.Parse("2023-01-01");
 
 
 NullableGuid guid = Guid.Empty;
 guid = null;
+
+var number = new DbInt(1);
 
 
 var doStuff = (Ints i) => Console.WriteLine(i.Length);

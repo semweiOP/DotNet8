@@ -1,10 +1,13 @@
-﻿using MyConsole;
+﻿//using MyConsole;
 //using Console = System.Console;
 using d = System.Decimal;
+using ListOfInts = System.Collections.Generic.List<int>;
 
 Console.WriteLine("Hello world!");
 
 _ = d.MaxValue;
+
+var listofints = new ListOfInts();
 
 namespace MyConsole
 {
