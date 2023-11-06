@@ -1,5 +1,12 @@
 <Project>
 	<PropertyGroup>
 		<UseArtifactsOutput>true</UseArtifactsOutput>
+		<IncludeProjectNameInArtifactsPaths>false</IncludeProjectNameInArtifactsPaths>
+		<!--<ArtifactsBinOutputName>runthis</ArtifactsBinOutputName>-->
+		<!-- artifacts\{output type}\{project name}\{Pivot}-->
+		<!-- artifacts\bin\DotNet8.SimplifiedOutputPath\release -->
+		<!-- bin\Release\net8.0\ -->
+		<!--<ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath> -->
+		<ArtifactsPivots>$(ArtifactsPivots)_pivot</ArtifactsPivots>
 	</PropertyGroup>
 </Project>
