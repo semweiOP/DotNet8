@@ -1,13 +1,9 @@
 ﻿
 
 
-var addWithDefault =
-    (int addTo = 2) => addTo + 1;
+var addWithDefault = (int addTo = 2) => addTo + 1;
 
-
-var sum =
-    (params int[] numbers) => numbers.Sum();
-
+var sum = (params int[] numbers) => numbers.Sum();
 
 
 _ = addWithDefault();
