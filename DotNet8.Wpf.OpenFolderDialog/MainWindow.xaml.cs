@@ -24,10 +24,16 @@ namespace DotNet8.Wpf.OpenFolderDialog
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             var openFolderDialog = new Microsoft.Win32.OpenFolderDialog()
             {
                 Title = "Select folder to open ...",
-                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),
+                // InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),
+                // ClientGuid = Guid.NewGuid(),
+                // AddToRecent = true,
+                // RootDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),
+                // DefaultDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),
+                // ShowHiddenItems = true
             };
 
             string folderName = "";
