@@ -10,4 +10,4 @@ GC.RefreshMemoryLimit();
 Console.WriteLine("New memory limit: {0} MB", CurrentMemoryLimitInMb());
 
 
-static double CurrentMemoryLimitInMb() =>    GC.GetGCMemoryInfo().TotalAvailableMemoryBytes / Math.Pow(1024, (int)2);
+static double CurrentMemoryLimitInMb() => GC.GetGCMemoryInfo().TotalAvailableMemoryBytes / Math.Pow(1024, (int)2);
