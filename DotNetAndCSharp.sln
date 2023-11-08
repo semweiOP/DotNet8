@@ -147,6 +147,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpOld.UsingAlias", "CSh
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF Core 8", "EF Core 8", "{0B929560-F8CB-4FE1-807F-2C7661218B3F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14..Net 8 - Garbage Collection", "14..Net 8 - Garbage Collection", "{CE88E31F-9293-4F42-AD65-FB32A7CEBBCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.GarbageCollection", "DotNet8.GarbageCollection\DotNet8.GarbageCollection.csproj", "{ACAD7C08-E821-460D-8E31-BDA6B0F020D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -309,6 +313,10 @@ Global
 		{328B5DF9-CB02-45CD-AE7D-7155DAB26AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{328B5DF9-CB02-45CD-AE7D-7155DAB26AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{328B5DF9-CB02-45CD-AE7D-7155DAB26AB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAD7C08-E821-460D-8E31-BDA6B0F020D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAD7C08-E821-460D-8E31-BDA6B0F020D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAD7C08-E821-460D-8E31-BDA6B0F020D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAD7C08-E821-460D-8E31-BDA6B0F020D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -362,6 +370,7 @@ Global
 		{772FF8B2-7A10-4EF4-9A43-5BFF183FAE6A} = {21C3441D-E370-47F1-9F1F-1DED8ADE6FFF}
 		{64343507-191E-424F-88CC-640BBC75B3A7} = {EDD877DD-F665-4425-9F7A-F441CFE31994}
 		{328B5DF9-CB02-45CD-AE7D-7155DAB26AB2} = {675A1181-CE05-4413-A8A5-564EC374021B}
+		{ACAD7C08-E821-460D-8E31-BDA6B0F020D9} = {CE88E31F-9293-4F42-AD65-FB32A7CEBBCF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09DE9320-026F-4BC5-A0EC-7FABCCE71CED}
