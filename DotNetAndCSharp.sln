@@ -147,9 +147,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpOld.UsingAlias", "CSh
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF Core 8", "EF Core 8", "{0B929560-F8CB-4FE1-807F-2C7661218B3F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14..Net 8 - Garbage Collection", "14..Net 8 - Garbage Collection", "{CE88E31F-9293-4F42-AD65-FB32A7CEBBCF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14. .NET 8 - Garbage Collection", "14. .NET 8 - Garbage Collection", "{CE88E31F-9293-4F42-AD65-FB32A7CEBBCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.GarbageCollection", "DotNet8.GarbageCollection\DotNet8.GarbageCollection.csproj", "{ACAD7C08-E821-460D-8E31-BDA6B0F020D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "15. .NET 8 - Options validation", "15. .NET 8 - Options validation", "{2F556321-133A-40F4-842D-EC7C26E79CF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.OptionsValidation", "DotNet8.OptionsValidation\DotNet8.OptionsValidation.csproj", "{73B6BA5E-03DB-421E-A306-E88E5FE7FB6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -317,6 +321,10 @@ Global
 		{ACAD7C08-E821-460D-8E31-BDA6B0F020D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACAD7C08-E821-460D-8E31-BDA6B0F020D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACAD7C08-E821-460D-8E31-BDA6B0F020D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B6BA5E-03DB-421E-A306-E88E5FE7FB6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B6BA5E-03DB-421E-A306-E88E5FE7FB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B6BA5E-03DB-421E-A306-E88E5FE7FB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B6BA5E-03DB-421E-A306-E88E5FE7FB6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -371,6 +379,7 @@ Global
 		{64343507-191E-424F-88CC-640BBC75B3A7} = {EDD877DD-F665-4425-9F7A-F441CFE31994}
 		{328B5DF9-CB02-45CD-AE7D-7155DAB26AB2} = {675A1181-CE05-4413-A8A5-564EC374021B}
 		{ACAD7C08-E821-460D-8E31-BDA6B0F020D9} = {CE88E31F-9293-4F42-AD65-FB32A7CEBBCF}
+		{73B6BA5E-03DB-421E-A306-E88E5FE7FB6F} = {2F556321-133A-40F4-842D-EC7C26E79CF1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09DE9320-026F-4BC5-A0EC-7FABCCE71CED}
